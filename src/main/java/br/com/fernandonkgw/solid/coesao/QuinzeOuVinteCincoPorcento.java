@@ -1,8 +1,8 @@
 package br.com.fernandonkgw.solid.coesao;
 
-public class QuinzeOuVinteCincoPorcento {
+public class QuinzeOuVinteCincoPorcento implements RegraDeCalculo {
 
-	public double quinzeOuVinteCincoPorcento(Funcionario funcionario) {
+	public double calcula(Funcionario funcionario) {
         if(funcionario.getSalarioBase() > 2000.0) {
             return funcionario.getSalarioBase() * 0.75;
         }
