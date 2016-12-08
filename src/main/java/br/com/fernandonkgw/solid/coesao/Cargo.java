@@ -1,5 +1,17 @@
 package br.com.fernandonkgw.solid.coesao;
 
 public enum Cargo {
-	DESENVOLVEDOR, DBA, TESTER
+	DESENVOLVEDOR(new DezOuVintePorcento()), 
+	DBA(new QuinzeOuVinteCincoPorcento()), 
+	TESTER(new QuinzeOuVinteCincoPorcento());
+
+	private RegraDeCalculo regra;
+
+	Cargo(RegraDeCalculo regra) {
+		this.regra = regra;
+	}
+
+	public RegraDeCalculo getRegra() {
+		return regra;
+	}
 }
